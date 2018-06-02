@@ -1,7 +1,11 @@
 package com.nicolasmattar.almundo.examen1.model;
 
+import java.time.Duration;
 import java.util.Objects;
 
+/**
+ * Representa un Empleado en el Sistema.
+ */
 public class Employee {
 
     public enum Type {
@@ -40,6 +44,10 @@ public class Employee {
         this.type = type;
     }
 
+    public Duration assignCall(Call call) throws InterruptedException {
+        return call.answer();
+    }
+
     @Override
     public String toString() {
         return legajo.toString() + '-' + nombre + '[' + type + ']';
@@ -55,7 +63,6 @@ public class Employee {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(legajo);
     }
 }
