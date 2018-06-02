@@ -1,6 +1,5 @@
 package com.nicolasmattar.almundo.examen1.model;
 
-import com.nicolasmattar.almundo.examen1.exception.LlamadaFinalizadaAbruptamenteException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -3,7 +3,6 @@ package com.nicolasmattar.almundo.examen1.api;
 import com.nicolasmattar.almundo.examen1.model.Call;
 import com.nicolasmattar.almundo.examen1.model.CallEndReport;
 
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 
 /**

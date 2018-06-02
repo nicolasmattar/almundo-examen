@@ -51,7 +51,7 @@ public class Dispatcher implements IDispatcher {
      * @param maxThreads      Cantidad de Maxima Threads / Lineas Tefonicas
      */
     public Dispatcher(EmployeeService employeeService, int maxThreads) {
-        if(employeeService == null){
+        if (employeeService == null) {
             throw new IllegalArgumentException("employeeService must not be null");
         }
         this.employeeService = employeeService;
