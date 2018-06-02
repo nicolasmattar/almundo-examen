@@ -5,9 +5,14 @@ import java.util.Objects;
 
 /**
  * Representa un Empleado en el Sistema.
+ * <p>
+ * Nota: Se podria haber utilizado {@link Comparable}, pero el Comparator permite mas flexibilidad en diseño.
  */
 public class Employee {
 
+    /**
+     * Representa el Tipo de Empleado
+     */
     public enum Type {
         OPERADOR,
         SUPERVISOR,

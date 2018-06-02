@@ -7,10 +7,7 @@ import java.util.Comparator;
 /**
  * Compara un Empleado basado en Type.
  * <p>
- * Se respeta el siguiente orden:
- * - OPERADOR
- * - SUPERVISOR
- * - DIRECTOR
+ * Se respeta el siguiente orden: OPERADOR, SUPERVISOR, DIRECTOR
  */
 public class EmployeeComparator implements Comparator<Employee> {
 

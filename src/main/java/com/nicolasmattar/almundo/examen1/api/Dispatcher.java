@@ -1,6 +1,6 @@
 package com.nicolasmattar.almundo.examen1.api;
 
-import com.nicolasmattar.almundo.examen1.exception.LlamadaFinalizadaAbruptamenteException;
+import com.nicolasmattar.almundo.examen1.exception.SuddenlyEndCallException;
 import com.nicolasmattar.almundo.examen1.model.Call;
 import com.nicolasmattar.almundo.examen1.model.CallEndReport;
 import com.nicolasmattar.almundo.examen1.model.Employee;
@@ -16,9 +16,7 @@ import java.util.concurrent.*;
  * Implementacion default del IDispatcher.
  * Esta implementacion encola las distintas llamadas en un {@code ExecutorService}.
  * <p>
- * MAX_THREADS
- * <p>
- * En caso de que no existan empleados libres o entren mas de 10 llamadas concurrentes las llamadas seran encoladas dentro de del {@link ExecutorService} (Utiliza un {@link LinkedBlockingQueue} por dentro.
+ * En caso de que no existan empleados libres o entren mas de 10 llamadas concurrentes las llamadas seran encoladas dentro de del {@link ExecutorService} (Utiliza un {@link LinkedBlockingQueue} por dentro).
  *
  * @author Nicolas Mattar
  */
@@ -105,7 +103,7 @@ public class Dispatcher implements IDispatcher {
                 return callEndReport;
             } catch (InterruptedException e) {
                 LOGGER.warn("Se ha producido un error en la llamada {}", call);
-                throw new LlamadaFinalizadaAbruptamenteException(e, call);
+                throw new SuddenlyEndCallException(e, call);
             } finally {
                 //Al final del proceso, sea por error o no, si un empleado todavia se encuentra tomado, liberarlo.
                 if (employee != null) {

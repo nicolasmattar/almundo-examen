@@ -4,8 +4,8 @@ import java.time.Duration;
 import java.util.Objects;
 
 /**
- * Representa un Reporte Final de la Llamada.
- * Incluye quien atendion la llamada y cuanto tiempo duro.
+ * Representa un Reporte Final de una Llamada.
+ * Incluye, ademas de la llamada en cuestion, quien atendio la llamada y cuanto tiempo duro.
  */
 public class CallEndReport {
     private final Call call;

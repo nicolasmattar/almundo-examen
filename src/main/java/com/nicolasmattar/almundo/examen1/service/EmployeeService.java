@@ -8,6 +8,8 @@ import java.util.concurrent.PriorityBlockingQueue;
 
 /**
  * Servicio para administrar los Empleados.
+ * <p>
+ * Esta implementacion permite administrar a los empleados disponibles para atender llamadas.
  */
 public class EmployeeService {
 
@@ -35,6 +37,7 @@ public class EmployeeService {
      * Devuelve el proximo empleado libre o espera a que haya uno disponible.
      *
      * @return siguiente empleado libre.
+     * @throws InterruptedException Si el Thread es interrumpido mientras se espera a un empleado disponible.
      */
     public Employee getNextFreeEmployee() throws InterruptedException {
         return employees.take();

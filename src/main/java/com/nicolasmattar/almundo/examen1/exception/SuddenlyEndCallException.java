@@ -3,7 +3,7 @@ package com.nicolasmattar.almundo.examen1.exception;
 import com.nicolasmattar.almundo.examen1.model.Call;
 
 /**
- * Representa que una llamada
+ * Representa que una llamada fue finalizada abruptamente (Antes o despues de ser atendida).
  * <p>
  * Eso puede suceder si un thread es interrumpido mientras espera un empleado para atenderla o la mientras la llamada esta en curso.
  */
