@@ -8,9 +8,9 @@ import java.util.Objects;
  * Incluye quien atendion la llamada y cuanto tiempo duro.
  */
 public class CallEndReport {
-    private Call call;
-    private Employee employee;
-    private Duration duration;
+    private final Call call;
+    private final Employee employee;
+    private final Duration duration;
 
     public CallEndReport(Call call, Employee employee, Duration duration) {
         this.call = call;

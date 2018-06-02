@@ -9,7 +9,7 @@ import com.nicolasmattar.almundo.examen1.model.Call;
  */
 public class LlamadaFinalizadaAbruptamenteException extends RuntimeException {
 
-    private Call call;
+    private final Call call;
 
     public LlamadaFinalizadaAbruptamenteException(Call call) {
         this.call = call;

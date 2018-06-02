@@ -14,7 +14,7 @@ public class Call {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Call.class);
 
-    private Long id;
+    private final Long id;
 
     public Call(Long id) {
         this.id = id;

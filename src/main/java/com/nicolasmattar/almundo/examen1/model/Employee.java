@@ -14,7 +14,7 @@ public class Employee {
         DIRECTOR
     }
 
-    private Long legajo;
+    private final Long legajo;
     private String nombre;
     private Type type;
 

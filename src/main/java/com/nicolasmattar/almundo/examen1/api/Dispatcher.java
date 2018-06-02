@@ -30,7 +30,7 @@ public class Dispatcher implements IDispatcher {
      * Este numero se configuraria segun la cantidad de "lineas telefonicas" disponibles.
      * Basado en la premisa del Examen, se configura un MAX_THREADS de 10.
      */
-    public static final int MAX_THREADS = 10;
+    private static final int MAX_THREADS = 10;
 
     private final EmployeeService employeeService;
     private final ExecutorService executor;
@@ -86,7 +86,7 @@ public class Dispatcher implements IDispatcher {
         private final EmployeeService employeeService;
         private final Call call;
 
-        public CallDispatcher(EmployeeService employeeService, Call call) {
+        CallDispatcher(EmployeeService employeeService, Call call) {
             this.employeeService = employeeService;
             this.call = call;
         }

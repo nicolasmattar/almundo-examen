@@ -84,10 +84,10 @@ public class DispatcherTest {
     /**
      * Metodo privado con la logica de ejecucion del test
      *
-     * @param dispatcher
+     * @param dispatcher IDispatcher que ejecutara el caso de prueba
      * @param numberOfCalls   Numero de llamadas. Seran llamadas desde el 1 + {@code numberOfCalls + 1}
      * @param numberOfThreads Numero de Threads Concurrentes para llamar al Dispatcher
-     * @throws InterruptedException Si algun thread es interrumpido.
+     * @throws InterruptedException Si algun thread es interrumpido
      */
     private void dispatchCall(IDispatcher dispatcher, long numberOfCalls, int numberOfThreads) throws InterruptedException {
         //Preparar las llamadas, en este caso 40.
@@ -108,12 +108,11 @@ public class DispatcherTest {
                 .forEach(cr -> LOG.info(cr.toString()));
     }
 
-
-    @Test
     /**
      * Test Extra: Veririca el Orden de Atencion.
      * Aunque no deterministico por las caracterisiticas Multithreading del codigo, este metodo permite verificar el orden de atencion porque llama a Dispatcher con un unico Thread.
      */
+    @Test
     public void dispatchCall_checkOrder() {
         //Creamos un IDispatcher con 10 Threads (Default)
         IDispatcher dispatcher = new Dispatcher(employeeService);

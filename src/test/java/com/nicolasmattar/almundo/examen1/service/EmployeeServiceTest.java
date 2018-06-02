@@ -23,7 +23,7 @@ public class EmployeeServiceTest {
      * - Empleado 10    -> DIRECTOR
      */
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         employeeService = new EmployeeService(new EmployeeComparator());
 
         //Se agregan de forma desordenada para probar si se obtienen ordenados por Type.
@@ -40,7 +40,7 @@ public class EmployeeServiceTest {
     /**
      * Validar que el orden de extraccion de los Empleados.
      *
-     * @throws InterruptedException
+     * @throws InterruptedException Si algun thread es interrumpido
      */
     @Test
     public void getNextFreeEmployee_withoutFreeing() throws InterruptedException {
@@ -59,7 +59,7 @@ public class EmployeeServiceTest {
     /**
      * Validar que el orden de extraccion de los Empleados cuando durante la operatoria los empleados quedan libres.
      *
-     * @throws InterruptedException
+     * @throws InterruptedException Si algun thread es interrumpido
      */
     @Test
     public void getNextFreeEmployee_withFreeing() throws InterruptedException {
