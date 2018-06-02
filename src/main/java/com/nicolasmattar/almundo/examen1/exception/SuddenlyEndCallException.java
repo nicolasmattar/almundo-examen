@@ -7,30 +7,30 @@ import com.nicolasmattar.almundo.examen1.model.Call;
  * <p>
  * Eso puede suceder si un thread es interrumpido mientras espera un empleado para atenderla o la mientras la llamada esta en curso.
  */
-public class LlamadaFinalizadaAbruptamenteException extends RuntimeException {
+public class SuddenlyEndCallException extends RuntimeException {
 
     private final Call call;
 
-    public LlamadaFinalizadaAbruptamenteException(Call call) {
+    public SuddenlyEndCallException(Call call) {
         this.call = call;
     }
 
-    public LlamadaFinalizadaAbruptamenteException(String message, Call call) {
+    public SuddenlyEndCallException(String message, Call call) {
         super(message);
         this.call = call;
     }
 
-    public LlamadaFinalizadaAbruptamenteException(String message, Throwable cause, Call call) {
+    public SuddenlyEndCallException(String message, Throwable cause, Call call) {
         super(message, cause);
         this.call = call;
     }
 
-    public LlamadaFinalizadaAbruptamenteException(Throwable cause, Call call) {
+    public SuddenlyEndCallException(Throwable cause, Call call) {
         super(cause);
         this.call = call;
     }
 
-    public LlamadaFinalizadaAbruptamenteException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace, Call call) {
+    public SuddenlyEndCallException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace, Call call) {
         super(message, cause, enableSuppression, writableStackTrace);
         this.call = call;
     }
